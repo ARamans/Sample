@@ -1,9 +1,15 @@
 Sample::Application.routes.draw do
-  get "sessions/new"
 
-  get "users/new"
-  resources :users
+  root :to => "sessions#new"
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  resources :users do 
+    collection do 
+      get 'welcome'
+      
+    end
+  end
   resources :sessions
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

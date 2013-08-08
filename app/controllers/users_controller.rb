@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  
   def new
     @user = User.new
   end
@@ -6,7 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to users_url, :notice => "Signed up!"
+      redirect_to new_session_url, :notice => "Signed up!"
     else
       render "new"
     end
@@ -14,6 +15,10 @@ class UsersController < ApplicationController
 
   def index
   	@users = User.all
+  end
+
+  def welcome
+   
   end
 
 end
