@@ -1,3 +1,7 @@
+<div class="login-page">
+
+<div class="login-grid">
+
 <h1>Sign Up</h1>
 
 <%= form_for @user do |f| %>
@@ -12,23 +16,26 @@
       </ul>
     </div>
   <% end %>
+ 
+  <table align= "center">
+  <tr>
+    <td align="left"><%= f.label :email %><td/>
+    <td><%= f.text_field :email,  :size =>"15"%><td/>
+  </tr>
 
-  <p>
-    <%= f.label :email %><br/>
-    <%= f.text_field :email %>
-  </p>
+  <tr>
+    <td align="left"><%= f.label :password %><td/>
+    <td><%= f.password_field :password, :size => "15"%><td/>
+  </tr>
 
-  <p>
-    <%= f.label :password %><br/>
-    <%= f.password_field :password %>
-  </p>
+  <tr>
+    <td align="left"><%= f.label :password_confirmation %><td/>
+    <td><%= f.password_field :password_confirmation,  :size => "15"%><td/>
+  </tr>
 
-  <p>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </p>
+  </table>
 
-  <p class="button"><%= f.submit "Submit" %></p>
-  
+  <%= f.submit "Submit", :class => "button" %>
+  <%= link_to "Cancel", new_session_path, :class => "button" %>
 <% end %>
 

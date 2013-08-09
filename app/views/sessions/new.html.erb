@@ -1,16 +1,21 @@
-<h1>Log in</h1>
+<div class="login-page">
+  
+  <div class="login-grid">
+  <h1>Log in</h1>
 
-<%= form_tag sessions_path do %>
-  <p>
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email, params[:email] %>
-  </p>
-  <p>
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
-  </p>
+  <%= form_tag sessions_path do %>
+    <table align="center">
+        <tr>
+          <td align="left"><%= label_tag :email %></td>
+          <td><%= text_field_tag :email, params[:email], :size => "15" %></td>
+        </tr>
+          <tr>
+            <td align="left"><%= label_tag :password %></td>
+            <td><%= password_field_tag :password, "", :size => "15" %></td>
+        </tr>
+      </table>
+    <%= submit_tag "Login", :class => "button" %>
+    <%= link_to "Sign up", new_user_path, :class => "button" %>
+  <% end %>
 
-  <p class="button"><%= submit_tag %></p>
-  <%= link_to "signup", new_user_path %>
-<% end %>
-
+</div>

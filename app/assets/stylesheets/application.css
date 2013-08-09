@@ -11,3 +11,37 @@
  *= require_self
  *= require_tree .
  */
+
+ .login-page {
+ 	background-color:lightyellow;
+ 	padding:10px;
+ 	text-align:center;
+ }
+
+ .login-grid {
+ 	background-color:lightgray;
+ 	width:400px;
+ 	margin:0 auto 20px;
+ 	padding:20px;
+ 	border-radius: 20px 20px 20px 20px;
+ }
+
+ .button {
+ 	background-color: green;
+ 	width: 100px;
+ 	border-radius: 5px;
+ 	margin: 5px;
+ 	padding: 5px;
+ 	text-align: center;
+ 	color:#000;
+ 	text-decoration: none;
+ 	border-color: orange;
+ }
+
+ .left {
+ 	text-align: top right;
+ 	float :right;
+ 	text-decoration: none;
+
+ }
+
