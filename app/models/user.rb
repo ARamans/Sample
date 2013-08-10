@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   
   attr_accessible :email, :password_hash, :password_salt, :password, :password_confirmation
   
-  attr_accessor :password
+  attr_accessor :password, :name
  
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create

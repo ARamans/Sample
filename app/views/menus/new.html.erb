@@ -1,0 +1,19 @@
+<h1> Menu form </h1>
+
+<%= form_for @menu do |f| %>
+
+
+<%= f.label :name %><
+<%= f.text_field :name %><br/>
+<%= f.label :title %>
+<%= f.text_field :title %><br/>
+
+<%= f.label :description%>
+<%= f.text_field :description %><br/>
+
+<%= f.label :price %>
+<%= f.text_field :price %><br/>
+
+<%=f.submit "submit" %>
+
+<% end %>

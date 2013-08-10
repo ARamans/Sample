@@ -5,10 +5,12 @@ Sample::Application.routes.draw do
   resources :users do 
     collection do 
       get 'welcome'
+
       
     end
   end
   resources :sessions
+  resources :menus
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

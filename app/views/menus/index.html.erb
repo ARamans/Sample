@@ -1,0 +1,20 @@
+<h3 align="center">Menus</h3>
+<table style="width:100%;">
+	<th>Name</th>
+	<th>Title</th>
+	<th>Description</th>
+	<th>Price</th>
+	<th>Created</th>
+	<th>Updated</th>
+	<% @menus.each do |menu| %>
+		<tr>
+			<td align="center"><%= menu.name  %></td>
+			<td align="center"><%= menu.title  %></td>
+			<td align="center"><%= menu.description  %></td>
+			<td align="center"><%= menu.price  %></td>
+			<td align="center"><%= menu.created_at %></td>
+			<td align="center"><%= menu.updated_at %></td>
+			<td><%= link_to "Show", menu_path(menu.id) %></td>
+		</tr>
+	<% end %>
+</table>
