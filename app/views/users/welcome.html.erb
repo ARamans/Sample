@@ -2,40 +2,6 @@
 <td align = "top left"><%= link_to "log out", log_out_path, :class =>"left" %></td>
 
 <h2> welcome to my app <h2/>
+<%= link_to "next" %>
 
 </div>
-<%= form_for @user do |f| %>
-
-  <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
- 
-  <table align= "center">
-  <tr>
-    <td align="left"><%= f.label :name %><td/>
-    <td><%= f.text_field :name,  :size =>"15"%><td/>
-  </tr>
-
-  <tr>
-    <td align="left"><%= f.label :email %><td/>
-    <td><%= f.text_field :email, :size => "15"%><td/>
-  </tr>
-
-  <tr>
-    <td align="left"><%= f.label :password %><td/>
-    <td><%= f.password_field :password,  :size => "15"%><td/>
-  </tr>
-
-  </table>
-
-  <%= f.submit "Submit", :class => "button" %>
-  <%= link_to "Cancel", new_session_path, :class => "button" %>
-<% end %>
-

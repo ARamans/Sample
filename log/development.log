@@ -18005,3 +18005,26 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 12:27:48 +0530
 Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (3.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130806094501)
+Migrating to CreateMenus (20130810051741)
+Migrating to AddFieldsToMenus (20130810052315)
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130806094501)
+Migrating to CreateMenus (20130810051741)
+Migrating to AddFieldsToMenus (20130810052315)
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130806094501)
+Migrating to CreateMenus (20130810051741)
+Migrating to AddFieldsToMenus (20130810052315)
+Migrating to AddItemTypeToMenus (20130812063515)
+  [1m[35m (376.5ms)[0m  ALTER TABLE `menus` ADD `item_type` varchar(255)
+  [1m[36m (48.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130812063515')[0m
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
