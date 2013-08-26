@@ -1,0 +1,19 @@
+<% if request.get? %>
+	<%= form_tag favourites_path do %>
+		<%= label_tag :name, "Enter Name" %>
+		<%= text_field_tag :name %>
+		<%= hidden_field_tag :item_ids, @item_ids %>
+		<%= hidden_field_tag :quantitys, @quantitys %><br/>
+		<%= submit_tag "Save" %>
+	<% end %>
+<% else %>
+	<% i = 0 %>
+	<% @item_ids.each do |id| %>
+		<%= item_name(id) %>
+		<%= @quantitys[i] %>
+		<% i = i+1 %>
+	<% end %><br />
+	<br/>
+	<%= link_to "Save", selected_list_menus_path(:item_ids => @item_ids, :quantitys => @quantitys), :class => "button" %>
+	<%= link_to "Go Back", list_menus_path(:item_type => @menu.item_type), :class => "button" %>
+<% end %>

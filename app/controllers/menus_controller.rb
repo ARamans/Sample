@@ -39,5 +39,26 @@ class MenusController < ApplicationController
 		@menu.destroy
 		redirect_to menus_url, :notice => "Item deleted"
 	end
+   
+   def display
+   	   @menus = Menu.all(:select => "item_type").uniq
+   end
+
+    def list
+   	 	@menus = Menu.where(:item_type => params[:item_type])
+   	end
+
+   	def selected_list
+   		if request.get?
+   			@item_ids = params[:item_ids]
+   			@quantitys = params[:quantitys]
+   		else
+   			@item_ids = params[:item_ids]
+   			@quantitys = params[:quantitys]
+   			@menu = Menu.find(@item_ids[0])
+   		end
+   	end
 
 end
+
+

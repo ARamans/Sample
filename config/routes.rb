@@ -5,12 +5,21 @@ Sample::Application.routes.draw do
   resources :users do 
     collection do 
       get 'welcome'
-
-      
     end
   end
   resources :sessions
-  resources :menus
+  resources :menus do 
+    collection do 
+      get 'display'
+      get 'list'
+      get 'selected_list'
+      post "selected_list"
+    end
+  end
+
+  resources :favourites
+
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

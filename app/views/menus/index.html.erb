@@ -4,6 +4,7 @@
 	<th>Title</th>
 	<th>Description</th>
 	<th>Price</th>
+	<th>image</th>
 	<th>Created</th>
 	<th>Updated</th>
 	<% @menus.each do |menu| %>
@@ -12,6 +13,7 @@
 			<td align="center"><%= menu.title  %></td>
 			<td align="center"><%= menu.description  %></td>
 			<td align="center"><%= menu.price  %></td>
+			<td align="center"><%= menu.image %></td>
 			<td align="center"><%= menu.created_at %></td>
 			<td align="center"><%= menu.updated_at %></td>
 			<td><%= link_to "Show", menu_path(menu.id) %></td>

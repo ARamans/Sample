@@ -1,0 +1,8 @@
+<% @menus.each do |menu| %>
+	<%= form_tag selected_list_menus_path do %>
+		<%= menu.name %>
+		<%= check_box_tag "item_ids[]", menu.id %>
+		<%= text_field_tag "quantitys[]" %><br/>
+		<%= submit_tag "Save" %>
+	<% end %>
+<% end %>

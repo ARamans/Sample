@@ -1,0 +1,5 @@
+<% @menus .each do |menu| %>
+	<% if not menu.item_type == nil %>
+		<%= link_to menu.item_type, list_menus_path(:item_type => menu.item_type), :class => "button"  %>
+	<% end %>
+<% end %>
